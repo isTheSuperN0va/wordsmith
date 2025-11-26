@@ -1,0 +1,82 @@
+body { background-color: lightgray; }
+body * { background-color: white;}
+
+div {
+    margin: 0px;
+    padding: 0px;
+}
+
+.container {
+    margin: 2px;
+    padding: 5px;
+    border: 1px solid black;
+}
+
+.main {
+    display: flex;
+    height: 45vh;
+}
+
+.main div   { flex: 1; }
+#settings   { flex: 3; }
+#word       { flex: 2; }
+#words      { flex: 1; }
+
+.sylabblesContainer {
+    height: 55vh;
+}
+
+.sylabbles {
+    columns: 7;
+    column-gap: 10px;
+    column-fill: auto;
+    margin: 0;
+    padding:0;
+    height: 50%;
+
+}
+
+li {
+    list-style: none;
+    user-select: none;
+}
+
+li:hover {
+    cursor: grab;
+}
+
+li:active {
+    color:pink;
+    cursor: grabbing;
+}
+
+.sylPart {
+    margin-top: 7px;
+    border: 1px solid black
+    
+} 
+
+#word {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#wordBeingBuilt p {
+    padding: 0;
+    margin: 0;
+
+    text-align: center;
+
+    font-size: 100;
+    font-family: 'Times New Roman';
+}
+
+#words {
+    overflow: auto;
+}
+
+#words ul {
+    padding: 0;
+    margin: 0;
+}
