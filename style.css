@@ -1,15 +1,23 @@
-body { background-color: lightgray; }
-body * { background-color: white;}
+body { background-color: #171717; }
 
 div {
     margin: 0px;
     padding: 0px;
 }
 
+.container, #word span {
+    color: white;
+    font-family:'Inter', Courier, monospace;
+}
+
 .container {
-    margin: 2px;
-    padding: 5px;
-    border: 1px solid black;
+    margin: 8px;
+    padding: 15px;
+    border: 1px solid #9b59b6;
+    border-radius: 6px;
+    background-color: black;
+
+    
 }
 
 .main {
@@ -18,8 +26,8 @@ div {
 }
 
 .main div   { flex: 1; }
-#settings   { flex: 3; }
-#word       { flex: 2; }
+#settings   { flex: 3; display:flex; }
+#word       { flex: 2; min-width: 0; }
 #words      { flex: 1; }
 
 .sylabblesContainer {
@@ -40,43 +48,145 @@ li {
     list-style: none;
     user-select: none;
 }
+#settings div {margin: 2px; width: auto; height: auto;}
+#settings .phonotactics { flex: 1;}
+#settings .options {flex: 3;}
 
-li:hover {
-    cursor: grab;
+.sylabbles li {
+    padding: 4px 8px;
+    color: #9b59b6;
+    transition: all .2s ease;
 }
 
-li:active {
-    color:pink;
+.sylabbles li:hover {
+    cursor: grab;
+    transform: translateX(3px);
+}
+
+.sylabbles li:active {
+    color: white;
     cursor: grabbing;
 }
 
 .sylPart {
     margin-top: 7px;
-    border: 1px solid black
-    
 } 
+
+.sylPart input {
+    width: 100%;
+    color: white;
+    background-color: black;
+    border: none;
+    border-bottom: 2px solid darkorchid;
+    outline: none;
+}
+
+.sylPart input:focus {
+}
+
+.sylPart p, .sylStruct p {
+    font-size: 0.85em;
+    color: #9b59b6; /* Purple accent */
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 5px;
+}
+
+.sylStruct {
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+}
+
+.sylStruct input {
+    outline: none;
+
+    border: none;
+    border: 2px solid darkorchid;
+    border-radius: 3px;
+
+    padding-bottom: 30px;
+
+    color:white;
+    background-color: black;
+
+    font-size: 1.2em;
+    text-align: center;
+
+}
+
+.sylStruct p {
+    text-align: center;
+}
 
 #word {
     display: flex;
     justify-content: center;
     align-items: center;
+
+    width: 100%;
 }
 
-#wordBeingBuilt p {
+#word span {
     padding: 0;
-    margin: 0;
+    margin-right: 6px;
 
+    color: #9b59b6;
     text-align: center;
 
-    font-size: 100;
+    font-size: 60px;
     font-family: 'Times New Roman';
 }
 
+#word span:hover {
+    user-select: none;
+    cursor: pointer;
+}
+
 #words {
+    position: relative;
     overflow: auto;
 }
 
 #words ul {
-    padding: 0;
+    color: #9b59b6;
+
+    padding: 0px;
     margin: 0;
+}
+
+#words ul li {
+    padding-bottom: 6px;
+}
+
+#copynpaste {
+    position: absolute;
+    right: 10%;
+    bottom: 5%;
+
+    color: #9b59b6;
+    background-color: black;
+
+    border: none;
+    border-bottom: 1px solid #9b59b6;
+
+    padding: 10px;
+
+    transition: background-color .01s ease;
+}
+
+#copynpaste img {
+    stroke: #9b59b6;
+
+    width: 20px;
+    height: 20px;
+}
+
+#copynpaste:active {
+    background-color: #9b59b6;
+}
+
+#copynpaste:hover {
+    cursor: pointer;
 }

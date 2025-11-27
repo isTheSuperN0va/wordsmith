@@ -1,21 +1,45 @@
-<link rel="stylesheet" href="style.css">
+
+<head>
+    <link rel="stylesheet" href="style.css">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+</head>
 
 <body>
     <div class="main">
         <div class="container", id="settings">
-            <div class="sylPart">Onset</div>
-            <div class="sylPart">Nucleus</div>
-            <div class="sylPart">Coda</div>
-    
-            <p id="sylStruct">Structure: </p>
-    
+            <div class="phonotactics">
+                <div class="sylPart">
+                    <p>Onset</p>
+                    <input type="text">
+                </div>
+                <div class="sylPart">
+                    <p>Nucleus</p>
+                    <input type="text" name="" id="">
+                </div>
+                <div class="sylPart">
+                    <p>Coda</p>
+                    <input type="text">
+                </div>
+        
+                <div class="sylStruct">
+                    <p>Structure: </p>
+                    <input type="text">
+                </div>
+            </div>
+
+            <div class="options">
+
+
+            </div>
+
         </div>
     
     
         <div class="container", id="word">
-            <div id="wordBeingBuilt">
-                <p>Test</p>
-            </div>
+            <span>Test</span>
         </div>
     
         <div class="container", id="words">
@@ -33,17 +57,19 @@
                 <li>Word</li>
                 <li>Word</li>
             </ul>
+
+            <button id="copynpaste" onclick="copyWords()"><img src="copynpaste.svg" alt=""></img></button>
         </div>
     </div>
     
     <div class="container", class="sylabblesContainer">
         <ul class="sylabbles">
-            <li>sylabble</li>
-            <li>sylabble</li>
-            <li>sylabble</li>
-            <li>sylabble</li>
-            <li>sylabble</li>
-            <li>sylabble</li>
+            <li>sylabble2</li>
+            <li>sylabble3</li>
+            <li>sylabble4</li>
+            <li>sylabble5</li>
+            <li>sylabble6</li>
+            <li>sylabble7</li>
             <li>sylabble</li>
             <li>sylabble</li>
             <li>sylabble</li>
@@ -102,3 +128,4 @@
     </div>
     
 </body>
+<script src="script.js"></script>
