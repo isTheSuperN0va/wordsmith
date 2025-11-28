@@ -27,8 +27,8 @@ div {
 
 .main div   { flex: 1; }
 #settings   { flex: 3; display:flex; }
-#word       { flex: 2; min-width: 0; }
-#words      { flex: 1; }
+#wordContainer       { flex: 2; min-width: 0; position: relative; }
+#wordsContainer      { flex: 1; }
 
 .sylabblesContainer {
     height: 55vh;
@@ -121,6 +121,12 @@ li {
 }
 
 #word {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+
+
     display: flex;
     justify-content: center;
     align-items: center;
@@ -130,7 +136,7 @@ li {
 
 #word span {
     padding: 0;
-    margin-right: 6px;
+    margin-right: 5px;
 
     color: #9b59b6;
     text-align: center;
@@ -139,54 +145,88 @@ li {
     font-family: 'Times New Roman';
 }
 
+
+
 #word span:hover {
     user-select: none;
     cursor: pointer;
+    
+    text-decoration: underline;
 }
 
-#words {
+#word span:hover.selected-sylabble { text-decoration: none; }
+
+.selected-sylabble {
+    background-color: rgba(197, 25, 231, 0.7) !important;
+}
+
+#wordsContainer {
     position: relative;
     overflow: auto;
 }
 
-#words ul {
+#wordContainer {
+    position:relative;
+}
+
+#wordsContainer ul {
     color: #9b59b6;
 
     padding: 0px;
     margin: 0;
 }
 
-#words ul li {
+#wordsContainer ul li {
+    color: #9b59b6;
     padding-bottom: 6px;
 }
 
-#copynpaste {
+.button {
     position: absolute;
-    right: 10%;
-    bottom: 5%;
+    
+    background-color: #9b59b6;
 
-    color: #9b59b6;
-    background-color: black;
-
+    outline: none;
     border: none;
-    border-bottom: 1px solid #9b59b6;
+    border: 1px solid #9b59b6;
+    border-radius: 6px;
 
     padding: 10px;
 
     transition: background-color .01s ease;
 }
 
-#copynpaste img {
+#copyButton {
+    right: 10px;
+    bottom: 10px;
+}
+
+#clearButtonWord {
+    right: 60px;
+    bottom: 10px;
+}
+
+#clearButtonWords {
+    right: 60px;
+    bottom: 10px;
+}
+
+#storeButton {
+    right: 10px;
+    bottom: 10px;
+}
+
+.icon {
     stroke: #9b59b6;
 
     width: 20px;
     height: 20px;
 }
 
-#copynpaste:active {
-    background-color: #9b59b6;
+.button:active {
+    background-color: darkorchid;
 }
 
-#copynpaste:hover {
+.button:hover {
     cursor: pointer;
 }

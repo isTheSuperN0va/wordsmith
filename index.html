@@ -38,27 +38,33 @@
         </div>
     
     
-        <div class="container", id="word">
-            <span>Test</span>
+        <div class="container", id="wordContainer">
+            <div id="word"></div>
+            <button class="button" id="clearButtonWord" onclick="clearWord()"><img class="icon" src="clear_black.svg" alt=""></button>
+            <button class="button" id="storeButton" onclick="addWordToList()"><img class="icon" src="arrow_right_black.svg" alt=""></button>
         </div>
     
-        <div class="container", id="words">
-            <ul>
-                <li>Word</li>
-                <li>Word</li>
-                <li>Word</li>
-                <li>Word</li>
-                <li>Word</li>
-                <li>Word</li>
-                <li>Word</li>
-                <li>Word</li>
-                <li>Word</li>
-                <li>Word</li>
-                <li>Word</li>
-                <li>Word</li>
-            </ul>
+        <div class="container", id="wordsContainer">
+            
+            <div id="words">
+                <ul id="wordsLi">
+                    <li>Word</li>
+                    <li>Word</li>
+                    <li>Word</li>
+                    <li>Word</li>
+                    <li>Word</li>
+                    <li>Word</li>
+                    <li>Word</li>
+                    <li>Word</li>
+                    <li>Word</li>
+                    <li>Word</li>
+                    <li>Word</li>
+                    <li>Word</li>
+                </ul>
+            </div>
 
-            <button id="copynpaste" onclick="copyWords()"><img src="copynpaste.svg" alt=""></img></button>
+            <button class="button" id="clearButtonWords" onclick="clearWords()"><img class="icon" src="clear_black.svg" alt=""></button>
+            <button class="button" id="copyButton" onclick="copyWords()"><img class="icon" src="copy_black.svg" alt=""></img></button>
         </div>
     </div>
     
