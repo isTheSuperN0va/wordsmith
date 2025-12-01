@@ -8,7 +8,10 @@ wordContainer = document.querySelector("#wordContainer");
 word = document.querySelector("#word")
 words = document.querySelector("#wordsLi");
 spanFromWord = document.querySelector("#word span")
+removeButton = document.getElementById("removeButton");
 sylArray = [];
+
+let selectedSpan;
 
 if (sylabbles.length === 0) { console.log("li is null") }
 
@@ -19,35 +22,62 @@ if (sylabbles.length === 0) { console.log("li is null") }
 
 sylArray = ["to", "ki"]
 addToWord(sylArray);
+updateSelector();
+setupSylabbles();
+handleRemoveButton();
 
-
-sylabbles.forEach(element => {
+function setupSylabbles() {
+    sylabbles.forEach(element => {
     element.addEventListener("click", () => {
         console.log("clicked " + element.textContent)
         sylArray.push(element.textContent)
         
-        console.log(sylArray[0]);
+
         addToWord(sylArray)
         
-         document.fonts?.ready
+            document.fonts?.ready
             .then(() => requestAnimationFrame(() => fitText(wordContainer)))
             .catch(() => requestAnimationFrame(() => fitText(wordContainer)));
+
+        updateSelector();
     })
-});
+    });
+}
+function updateSelector() {
+    Array.from(word.children).forEach(span => {
+        span.addEventListener("click", () => {
+            console.log("clicked " + span.classList)
 
-Array.from(word.children).forEach(span => {
-    span.addEventListener("click", () => {
-        console.log("clicked " + span.classList)
-
-        
-        if (span.classList != "selected-sylabble") {
-            deselectAllSyls();
-            span.classList.add("selected-sylabble");
-        }
-        else span.classList.remove("selected-sylabble");
-
+            if (span.classList != "selected-sylabble") {
+                deselectAllSyls();
+                span.classList.add("selected-sylabble");
+                
+            }
+            else span.classList.remove("selected-sylabble");
+            
+            selectedSpan = handleRemoveButton();
+        })
     })
-})
+}
+
+function handleRemoveButton(){
+    let foundSelected = false;
+
+    Array.from(word.children).forEach(span => {
+        if (span.classList == "selected-sylabble") { foundSelected = true; selectedSpan = span; }
+    })
+
+    if (foundSelected) {
+        removeButton.classList.remove("noshow");
+        return selectedSpan;
+    }
+    else {
+        removeButton.classList.add("noshow");
+        return null;
+    }
+}
+
+
 
 function deselectAllSyls() {
     Array.from(word.children).forEach(span => {
@@ -95,8 +125,7 @@ function fitText(container) {
 
     } 
     
-    console.log("spansWidth = " + spansWidth);
-    console.log("boxWidth = " + boxWidth);
+
     
 
         
@@ -113,7 +142,6 @@ function calculateSpansWidth(container) {
     let children = Array.from(container.children);
 
     if (children == null) { console.error("no children dectected in the word container"); }
-    else { console.error(children[0].offsetWidth); }
 
 
     let spansWidth = 0;
@@ -165,4 +193,16 @@ function addWordToList() {
     li.textContent = arrangedWord;
     words.appendChild(li)
 
+}
+
+function removeASyl() {
+    if (sylArray == null) {
+        console.error("Sylabble buffer null when trying to remove. Did you break something?");
+        return
+    }
+
+    sylArray.splice(sylArray.indexOf(selectedSpan.textContent), 1);
+    addToWord(sylArray)
+    updateSelector();
+    handleRemoveButton();
 }

@@ -157,7 +157,7 @@ li {
 #word span:hover.selected-sylabble { text-decoration: none; }
 
 .selected-sylabble {
-    background-color: rgba(197, 25, 231, 0.7) !important;
+    background-color: rgba(197, 25, 231, 0.3) !important;
 }
 
 #wordsContainer {
@@ -194,6 +194,9 @@ li {
     padding: 10px;
 
     transition: background-color .01s ease;
+
+    width: 45px;
+    height: 45px;
 }
 
 #copyButton {
@@ -214,6 +217,15 @@ li {
 #storeButton {
     right: 10px;
     bottom: 10px;
+}
+
+#removeButton {
+    left: 10px;
+    bottom: 10px;
+}
+
+#removeButton.noshow {
+    display: none;
 }
 
 .icon {
