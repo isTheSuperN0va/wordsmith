@@ -31,8 +31,8 @@ PHONOTACTICS_INPUTS.forEach(input => {
     input.addEventListener("keydown", (e) => {
 
         if (e.key === ' ') {
-            e.preventDefault()
-            AddCurrentToDiv(input)
+            e.preventDefault();
+            AddCurrentToDiv(input);
         }
     })
 })
