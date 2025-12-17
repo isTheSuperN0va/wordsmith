@@ -1,138 +1,17 @@
-
+<!DOCTYPE html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wordsmith</title>
     <link rel="stylesheet" href="style.css">
-    
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
 </head>
-
 <body>
-    <div class="main">
-        <div class="container", id="settings">
-            <div class="phonotactics">
-                <div class="sylPart">
-                    <p>Onset</p>
-                    <input type="text">
-                </div>
-                <div class="sylPart">
-                    <p>Nucleus</p>
-                    <input type="text" name="" id="">
-                </div>
-                <div class="sylPart">
-                    <p>Coda</p>
-                    <input type="text">
-                </div>
-        
-                <div class="sylStruct">
-                    <p>Structure: </p>
-                    <input type="text">
-                </div>
-            </div>
-
-            <div class="options">
-
-
-            </div>
-
-        </div>
-    
-    
-        <div class="container", id="wordContainer">
-            <div id="word"></div>
-            <button class="button" id="clearButtonWord" onclick="clearWord()"><img class="icon" src="clear_black.svg" alt=""></button>
-            <button class="button" id="storeButton" onclick="addWordToList()"><img class="icon" src="arrow_right_black.svg" alt=""></button>
-            <button class="button" id="removeButton" onclick="removeASyl()"><img src="remove_black.svg" alt=""></button>
-        </div>
-    
-        <div class="container", id="wordsContainer">
-            
-            <div id="words">
-                <ul id="wordsLi">
-                    <li>Word</li>
-                    <li>Word</li>
-                    <li>Word</li>
-                    <li>Word</li>
-                    <li>Word</li>
-                    <li>Word</li>
-                    <li>Word</li>
-                    <li>Word</li>
-                    <li>Word</li>
-                    <li>Word</li>
-                    <li>Word</li>
-                    <li>Word</li>
-                </ul>
-            </div>
-
-            <button class="button" id="clearButtonWords" onclick="clearWords()"><img class="icon" src="clear_black.svg" alt=""></button>
-            <button class="button" id="copyButton" onclick="copyWords()"><img class="icon" src="copy_black.svg" alt=""></img></button>
-        </div>
-    </div>
-    
-    <div class="container", class="sylabblesContainer">
-        <ul class="sylabbles">
-            <li>sylabble2</li>
-            <li>sylabble3</li>
-            <li>sylabble4</li>
-            <li>sylabble5</li>
-            <li>sylabble6</li>
-            <li>sylabble7</li>
-            <li>sylabble</li>
-            <li>sylabble</li>
-            <li>sylabble</li>
-            <li>sylabble</li>
-            <li>sylabble</li>
-            <li>sylabble</li>
-            <li>sylabble</li>
-            <li>sylabble</li>
-            <li>sylabble</li>
-            <li>sylabble</li>
-            <li>sylabble</li>
-            <li>sylabble</li>
-            <li>sylabble</li>
-            <li>sylabble</li>
-            <li>sylabble</li>
-            <li>sylabble</li>
-            <li>sylabble</li>
-            <li>sylabble</li>
-            <li>sylabble</li>
-            <li>sylabble</li>
-            <li>sylabble</li>
-            <li>sylabble</li>
-            <li>sylabble</li>
-            <li>sylabble</li>
-            <li>sylabble</li>
-            <li>sylabble</li>
-            <li>sylabble</li>
-            <li>sylabble</li>
-            <li>sylabble</li>
-            <li>sylabble</li>
-            <li>sylabble</li>
-            <li>sylabble</li>
-            <li>sylabble</li>
-            <li>sylabble</li>
-            <li>sylabble</li>
-            <li>sylabble</li>
-            <li>sylabble</li>
-            <li>sylabble</li>
-            <li>sylabble</li>
-            <li>sylabble</li>
-            <li>sylabble</li>
-            <li>sylabble</li>
-            <li>sylabble</li>
-            <li>sylabble</li>
-            <li>sylabble</li>
-            <li>sylabble</li>
-            <li>sylabble</li>
-            <li>sylabble</li>
-            <li>sylabble</li>
-            <li>sylabble</li>
-            <li>sylabble</li>
-            <li>sylabble</li>
-            <li>sylabble</li>
-            <li>sylabble</li>
-        </ul>
-    </div>
-    
+    <main id="grid-container">
+        <section style="grid-area: config;"></section>
+        <section style="grid-area: word;"></section>
+        <section style="grid-area: list;"></section>
+        <section style="grid-area: syl;"></section>
+    </main>
 </body>
-<script src="script.js"></script>
+</html>
