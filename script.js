@@ -17,7 +17,7 @@ function GenerateSylabbles() {
         }
     }
 
-    console.log(sylabbles)
+    console.log(sylabbles);
 
     for (sylabble of sylabbles) {
         let newSylSpan = document.createElement("span");
