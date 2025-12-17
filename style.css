@@ -76,9 +76,12 @@ section {
     width: max-content;
     padding: 4px;
     background-color: var(--light-bg);
+
+    transition: transform 0.2s ease
 }
 
 #syls-section span:hover {
     cursor: grab;
-    transform: translateX(2px);
+    transform: translateX(4px);
 }
+
