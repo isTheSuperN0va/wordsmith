@@ -32,7 +32,7 @@ PHONOTACTICS_INPUTS.forEach(input => {
 
         if (e.key === ' ') {
             e.preventDefault();
-            AddCurrentToDiv(input);
+            AddCurrentToDiv(input)
         }
     })
 })
