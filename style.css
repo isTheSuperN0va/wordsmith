@@ -3,6 +3,15 @@
     --bg: hsl(0, 0%, 10%);
     --light-bg: hsl(0, 0%, 15%);
 
+    --text: hsl(0, 0%, 95%);
+
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: var(--text);
+
+}
+
+span, p, li, h1, h2, h3 {
+    color: var(--text);
 }
 
 
@@ -19,7 +28,7 @@ body {
 #grid-container {
     display: grid;
     grid-template-columns: 3fr 2fr 1fr;
-    grid-template-rows: 2fr 3fr;
+    grid-template-rows: 2fr 26em;
     grid-template-areas: 
     "config word list"
     "syl    syl  syl";
@@ -37,4 +46,39 @@ body {
 
 section {
     background-color: var(--bg);
+}
+
+#word-section {
+    position: relative;
+}
+
+
+
+#word-div {
+    position: absolute;
+    display: inline-block;
+
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+}
+
+#syls-section {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    flex-wrap: wrap;
+
+    padding: 12px;
+}
+
+#syls-section span {
+    width: max-content;
+    padding: 4px;
+    background-color: var(--light-bg);
+}
+
+#syls-section span:hover {
+    cursor: grab;
+    transform: translateX(2px);
 }
