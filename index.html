@@ -8,16 +8,54 @@
 </head>
 <body>
     <main id="grid-container">
-        <section id="config-section" style="grid-area: config;"></section>
-        <section id="word-section" style="grid-area: word;">
+        <section class="grid-item" id="config-section" style="grid-area: config;">
+            <section class="config-section-item" style="grid-area: inset;">
+                <h3 class="phonotactic-header">Onset</h3>
+                <div id="onset-container" class="phonotactic-container">
+                    <span>p</span>
+                    <span>t</span>
+                    <span>k</span>
+                    <span>s</span>
+                    <span>m</span>
+                    <span>n</span>
+                    <span>l</span>
+                    <span>w</span>
+                    <span>j</span>
+                </div>
+                <input class="phonotactic-input" type="text">
+
+            </section>
+            <section class="config-section-item" style="grid-area: coda;">
+                <h3 class="phonotactic-header">Coda</h3>
+                <div id="coda-container" class="phonotactic-container">
+                    <span>a</span>
+                    <span>e</span>
+                    <span>i</span>
+                    <span>o</span>
+                    <span>u</span>
+                </div>
+                <input class="phonotactic-input" type="text">
+                
+            </section>
+            <section class="config-section-item" style="grid-area: onset;">
+                <h3 class="phonotactic-header">Inset</h3>
+                <div id="inset-container" class="phonotactic-container"></div>
+                <input class="phonotactic-input" type="text">
+
+
+            </section>
+            <section class="config-section-item" style="grid-area: config;"></section>
+            <section class="config-section-item" style="grid-area: button;"></section>
+        </section>
+        <section class="grid-item" id="word-section" style="grid-area: word;">
             <div id="word-div">
                 <span>Ba</span>
                 <span>na</span>
                 <span>na</span>
             </div>
         </section>
-        <section id="word-list-section" style="grid-area: list;"></section>
-        <section id="syls-section" style="grid-area: syl;">
+        <section class="grid-item" id="word-list-section" style="grid-area: list;"></section>
+        <section class="grid-item" id="syls-section" style="grid-area: syl;">
         </section>
     </main>
 

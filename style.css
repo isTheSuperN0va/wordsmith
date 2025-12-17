@@ -85,3 +85,59 @@ section {
     transform: translateX(4px);
 }
 
+#config-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 3fr 1fr;
+
+    grid-template-areas: 
+    "inset  coda   onset  config"
+    "inset  coda   onset  button";
+}
+
+.config-section-item {
+    padding: 12px;
+    background-color: transparent;
+}
+
+.phonotactic-container {
+    width: 100%;
+    height: 10em;
+
+    border-radius: 4px;
+    
+    display: flex;
+    gap: 9px;
+
+    flex-wrap: wrap;
+    align-content: flex-start;
+}
+
+.phonotactic-container span {
+    width: max-content;
+    height: max-content;
+
+    padding: 2px;
+    background-color: var(--light-bg);
+}
+
+.phonotactic-input {
+    width: 100%;
+    box-sizing: border-box;
+
+    background-color: var(--light-bg);
+
+    border: none;
+    outline: none;
+
+    color: var(--text);
+    margin: 4px 0;
+    padding: 4px;
+
+    border: 2px solid hsl(0, 0%, 12%);
+}
+
+.grid-item {
+    border: 2px solid hsl(0, 0%, 7%);
+    background: linear-gradient(var(--bg), hsl(0, 0%, 7%));
+}
